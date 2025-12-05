@@ -5747,7 +5747,7 @@ class StatementAnalyzer
             Streams.forEachPair(
                     oldDescriptor.getAllFields().stream(),
                     newDescriptor.getAllFields().stream(),
-                    (newField, field) -> analysis.addSourceColumns(newField, analysis.getSourceColumns(field)));
+                    (field, newField) -> analysis.addSourceColumns(newField, analysis.getSourceColumns(field)));
             return scope.withRelationType(newDescriptor);
         }
 
